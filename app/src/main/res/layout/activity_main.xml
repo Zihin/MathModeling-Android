@@ -14,12 +14,6 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         >
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:background="@color/colorPrimary"
-            ></android.support.v7.widget.Toolbar>
         <TabHost xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -76,6 +70,14 @@
                         android:textColor="@color/tab_text"
                         android:drawableTop="@drawable/tab_frd"
                         android:text="@string/radio3_text"
+                        style="@style/tab_button_bg"
+                        />
+
+                    <RadioButton
+                        android:id="@+id/tab_icon_resouces"
+                        android:textColor="@color/tab_text"
+                        android:drawableTop="@drawable/tab_set"
+                        android:text="资源"
                         style="@style/tab_button_bg"
                         />
 
