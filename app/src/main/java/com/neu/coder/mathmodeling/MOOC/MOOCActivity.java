@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 
 import com.bigkoo.convenientbanner.CBViewHolderCreator;
 import com.bigkoo.convenientbanner.ConvenientBanner;
+import com.bigkoo.convenientbanner.ConvenientBanner.Transformer;
 import com.neu.coder.mathmodeling.R;
 import com.nostra13.universalimageloader.cache.disc.naming.Md5FileNameGenerator;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
@@ -41,7 +42,11 @@ public class MOOCActivity extends AppCompatActivity {
             public NetworkImageHolderView createHolder() {
                 return new NetworkImageHolderView();
             }
-        },networkImages);
+        },networkImages).setPageIndicator(new int[]{R.drawable.ic_page_indicator, R.drawable.ic_page_indicator_focused})
+                //设置指示器的方向
+                .setPageIndicatorAlign(ConvenientBanner.PageIndicatorAlign.ALIGN_PARENT_RIGHT)
+                //设置翻页的效果，不需要翻页效果可用不设
+                .setPageTransformer(Transformer.DefaultTransformer);
     }
 
     //初始化网络图片缓存库

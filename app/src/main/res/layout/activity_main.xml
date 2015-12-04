@@ -51,7 +51,7 @@
                     <RadioButton
                         android:id="@+id/tab_icon_mooc"
                         android:checked="true"
-                        android:textColor="@color/tabbar_text_color"
+                        android:textColor="@drawable/main_tabbar_text"
                         android:drawableTop="@drawable/main_tabbar_button_mooc"
                         android:text="@string/main_radio1_text"
                         style="@style/tab_button_bg"
@@ -59,7 +59,7 @@
 
                     <RadioButton
                         android:id="@+id/tab_icon_club"
-                        android:textColor="@color/tabbar_text_color"
+                        android:textColor="@drawable/main_tabbar_text"
                         android:drawableTop="@drawable/main_tabbar_button_club"
                         android:text="@string/main_radio2_text"
                         style="@style/tab_button_bg"
@@ -67,7 +67,7 @@
 
                     <RadioButton
                         android:id="@+id/tab_icon_quiz"
-                        android:textColor="@color/tabbar_text_color"
+                        android:textColor="@drawable/main_tabbar_text"
                         android:drawableTop="@drawable/main_tabbar_button_quiz"
                         android:text="@string/main_radio3_text"
                         style="@style/tab_button_bg"
@@ -75,7 +75,7 @@
 
                     <RadioButton
                         android:id="@+id/tab_icon_resources"
-                        android:textColor="@color/tabbar_text_color"
+                        android:textColor="@drawable/main_tabbar_text"
                         android:drawableTop="@drawable/main_tabbar_button_resources"
                         android:text="@string/main_radio4_text"
                         style="@style/tab_button_bg"
@@ -83,7 +83,7 @@
 
                     <RadioButton
                         android:id="@+id/tab_icon_settings"
-                        android:textColor="@color/tabbar_text_color"
+                        android:textColor="@drawable/main_tabbar_text"
                         android:drawableTop="@drawable/main_tabbar_button_settings"
                         android:text="@string/main_radio5_text"
                         style="@style/tab_button_bg"
