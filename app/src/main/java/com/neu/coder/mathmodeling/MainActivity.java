@@ -12,6 +12,7 @@ import com.neu.coder.mathmodeling.Club.ClubActivity;
 import com.neu.coder.mathmodeling.MOOC.MOOCActivity;
 import com.neu.coder.mathmodeling.Quiz.QuizActivity;
 import com.neu.coder.mathmodeling.Resources.ResourcesActivity;
+import com.neu.coder.mathmodeling.Settings.SettingActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -36,23 +37,27 @@ public class MainActivity extends AppCompatActivity {
         tabHost.addTab(tabHost.newTabSpec("tag2").setIndicator("1").setContent(new Intent(this,ClubActivity.class)));
         tabHost.addTab(tabHost.newTabSpec("tag3").setIndicator("2").setContent(new Intent(this,QuizActivity.class)));
         tabHost.addTab(tabHost.newTabSpec("tag4").setIndicator("3").setContent(new Intent(this,ResourcesActivity.class)));
+        tabHost.addTab(tabHost.newTabSpec("tag5").setIndicator("4").setContent(new Intent(this,SettingActivity.class)));
     }
 
     public class CheckListener implements OnCheckedChangeListener {
         @Override
         public void onCheckedChanged(RadioGroup group, int checkedId) {
             switch(checkedId){
-                case R.id.tab_icon_weixin:
+                case R.id.tab_icon_mooc:
                     tabHost.setCurrentTab(0);
                     break;
-                case R.id.tab_icon_address:
+                case R.id.tab_icon_club:
                     tabHost.setCurrentTab(1);
                     break;
-                case R.id.tab_icon_friend:
+                case R.id.tab_icon_quiz:
                     tabHost.setCurrentTab(2);
                     break;
-                case R.id.tab_icon_setting:
+                case R.id.tab_icon_resources:
                     tabHost.setCurrentTab(3);
+                    break;
+                case R.id.tab_icon_settings:
+                    tabHost.setCurrentTab(4);
                     break;
             }
         }

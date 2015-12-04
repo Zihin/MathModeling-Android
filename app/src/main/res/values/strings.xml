@@ -1,7 +1,8 @@
 <resources>
     <string name="app_name">MathModeling</string>
-    <string name="radio1_text">MOOC</string>
-    <string name="radio2_text">协会</string>
-    <string name="radio3_text">做题</string>
-    <string name="radio4_text">资料</string>
+    <string name="main_radio1_text">MOOC</string>
+    <string name="main_radio2_text">协会</string>
+    <string name="main_radio3_text">做题</string>
+    <string name="main_radio4_text">资料</string>
+    <string name="main_radio5_text">设置</string>
 </resources>
