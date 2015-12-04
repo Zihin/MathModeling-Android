@@ -44,48 +44,48 @@
                     android:id="@+id/main_radiogroup"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/mmfooter_bg"
+                    android:background="@color/tabbar_background_color"
                     android:paddingTop="8dp"
                     android:orientation="horizontal"
                     >
                     <RadioButton
-                        android:id="@+id/tab_icon_weixin"
+                        android:id="@+id/tab_icon_mooc"
                         android:checked="true"
-                        android:textColor="@color/tab_text"
-                        android:drawableTop="@drawable/tab_weixin"
-                        android:text="@string/radio1_text"
+                        android:textColor="@color/tabbar_text_color"
+                        android:drawableTop="@drawable/main_tabbar_button_mooc"
+                        android:text="@string/main_radio1_text"
                         style="@style/tab_button_bg"
                         />
 
                     <RadioButton
-                        android:id="@+id/tab_icon_address"
-                        android:textColor="@color/tab_text"
-                        android:drawableTop="@drawable/tab_address"
-                        android:text="@string/radio2_text"
+                        android:id="@+id/tab_icon_club"
+                        android:textColor="@color/tabbar_text_color"
+                        android:drawableTop="@drawable/main_tabbar_button_club"
+                        android:text="@string/main_radio2_text"
                         style="@style/tab_button_bg"
                         />
 
                     <RadioButton
-                        android:id="@+id/tab_icon_friend"
-                        android:textColor="@color/tab_text"
-                        android:drawableTop="@drawable/tab_frd"
-                        android:text="@string/radio3_text"
+                        android:id="@+id/tab_icon_quiz"
+                        android:textColor="@color/tabbar_text_color"
+                        android:drawableTop="@drawable/main_tabbar_button_quiz"
+                        android:text="@string/main_radio3_text"
                         style="@style/tab_button_bg"
                         />
 
                     <RadioButton
-                        android:id="@+id/tab_icon_resouces"
-                        android:textColor="@color/tab_text"
-                        android:drawableTop="@drawable/tab_set"
-                        android:text="资源"
+                        android:id="@+id/tab_icon_resources"
+                        android:textColor="@color/tabbar_text_color"
+                        android:drawableTop="@drawable/main_tabbar_button_resources"
+                        android:text="@string/main_radio4_text"
                         style="@style/tab_button_bg"
                         />
 
                     <RadioButton
-                        android:id="@+id/tab_icon_setting"
-                        android:textColor="@color/tab_text"
-                        android:drawableTop="@drawable/tab_set"
-                        android:text="@string/radio4_text"
+                        android:id="@+id/tab_icon_settings"
+                        android:textColor="@color/tabbar_text_color"
+                        android:drawableTop="@drawable/main_tabbar_button_settings"
+                        android:text="@string/main_radio5_text"
                         style="@style/tab_button_bg"
                         />
                 </RadioGroup>

@@ -29,7 +29,7 @@ public class NetworkImageHolderView implements CBPageAdapter.Holder<String> {
 
     @Override
     public void UpdateUI(Context context, int position, String data) {
-        imageView.setImageResource(R.drawable.mm_trans);
+        imageView.setImageResource(R.drawable.mooc_bar_bg);
         ImageLoader.getInstance().displayImage(data, imageView);
     }
 }
