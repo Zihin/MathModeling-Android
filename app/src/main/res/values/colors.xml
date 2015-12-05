@@ -3,7 +3,7 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
-    <color name="tabbar_text_color">#ffffffff</color>
-    <color name="tabbar_background_color">#D3D3D3</color>
+    <color name="tabbar_text_color">#9F9F9F</color>
+    <color name="tabbar_background_color">#ffffffff</color>
     <color name="tabbar_selected_text_color">#74ace1</color>
 </resources>
