@@ -17,4 +17,10 @@
         app:canLoop="true"
     />
 
+    <com.jcodecraeer.xrecyclerview.XRecyclerView
+        android:layout_marginTop="200dp"
+        android:id="@+id/recyclerview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+
 </RelativeLayout>

@@ -13,6 +13,8 @@ import com.neu.coder.mathmodeling.MOOC.MOOCActivity;
 import com.neu.coder.mathmodeling.Quiz.QuizActivity;
 import com.neu.coder.mathmodeling.Resources.ResourcesActivity;
 import com.neu.coder.mathmodeling.Settings.SettingActivity;
+import com.nostra13.universalimageloader.core.ImageLoader;
+import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -38,6 +40,10 @@ public class MainActivity extends AppCompatActivity {
         tabHost.addTab(tabHost.newTabSpec("tag3").setIndicator("2").setContent(new Intent(this,QuizActivity.class)));
         tabHost.addTab(tabHost.newTabSpec("tag4").setIndicator("3").setContent(new Intent(this,ResourcesActivity.class)));
         tabHost.addTab(tabHost.newTabSpec("tag5").setIndicator("4").setContent(new Intent(this,SettingActivity.class)));
+
+        //配置全局ImageLoader
+        ImageLoaderConfiguration configuration = ImageLoaderConfiguration.createDefault(this);
+        ImageLoader.getInstance().init(configuration);
     }
 
     public class CheckListener implements OnCheckedChangeListener {
