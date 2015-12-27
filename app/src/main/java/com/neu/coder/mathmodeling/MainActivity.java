@@ -13,8 +13,11 @@ import com.neu.coder.mathmodeling.MOOC.MOOCActivity;
 import com.neu.coder.mathmodeling.Quiz.QuizActivity;
 import com.neu.coder.mathmodeling.Resources.ResourcesActivity;
 import com.neu.coder.mathmodeling.Settings.SettingActivity;
+import com.nostra13.universalimageloader.cache.disc.naming.Md5FileNameGenerator;
+import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
+import com.nostra13.universalimageloader.core.assist.QueueProcessingType;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -25,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        initImageLoader();   //初始化网络图片缓存库
         main_radiogroup = (RadioGroup) findViewById(R.id.main_radiogroup);
 
         tabHost = (TabHost) this.findViewById(R.id.tabhost);
@@ -40,10 +44,6 @@ public class MainActivity extends AppCompatActivity {
         tabHost.addTab(tabHost.newTabSpec("tag3").setIndicator("2").setContent(new Intent(this,QuizActivity.class)));
         tabHost.addTab(tabHost.newTabSpec("tag4").setIndicator("3").setContent(new Intent(this,ResourcesActivity.class)));
         tabHost.addTab(tabHost.newTabSpec("tag5").setIndicator("4").setContent(new Intent(this,SettingActivity.class)));
-
-        //配置全局ImageLoader
-        ImageLoaderConfiguration configuration = ImageLoaderConfiguration.createDefault(this);
-        ImageLoader.getInstance().init(configuration);
     }
 
     public class CheckListener implements OnCheckedChangeListener {
@@ -67,5 +67,21 @@ public class MainActivity extends AppCompatActivity {
                     break;
             }
         }
+    }
+
+    //初始化网络图片缓存库
+    private void initImageLoader(){
+        //网络图片例子,结合常用的图片缓存库UIL,你可以根据自己需求自己换其他网络图片库
+        DisplayImageOptions defaultOptions = new DisplayImageOptions.Builder().
+                showImageForEmptyUri(R.drawable.mooc_bar_bg)
+                .cacheInMemory(true).cacheOnDisk(true).build();
+
+        ImageLoaderConfiguration config = new ImageLoaderConfiguration.Builder(
+                getApplicationContext()).defaultDisplayImageOptions(defaultOptions)
+                .threadPriority(Thread.NORM_PRIORITY - 2)
+                .denyCacheImageMultipleSizesInMemory()
+                .diskCacheFileNameGenerator(new Md5FileNameGenerator())
+                .tasksProcessingOrder(QueueProcessingType.LIFO).build();
+        ImageLoader.getInstance().init(config);
     }
 }

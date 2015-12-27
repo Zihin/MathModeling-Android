@@ -2,38 +2,132 @@ package com.neu.coder.mathmodeling.MOOC;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.util.Log;
+import android.view.View;
 
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.Volley;
 import com.bigkoo.convenientbanner.CBViewHolderCreator;
 import com.bigkoo.convenientbanner.ConvenientBanner;
 import com.bigkoo.convenientbanner.ConvenientBanner.Transformer;
+import com.jcodecraeer.xrecyclerview.ProgressStyle;
+import com.jcodecraeer.xrecyclerview.XRecyclerView;
 import com.neu.coder.mathmodeling.R;
-import com.nostra13.universalimageloader.cache.disc.naming.Md5FileNameGenerator;
-import com.nostra13.universalimageloader.core.DisplayImageOptions;
-import com.nostra13.universalimageloader.core.ImageLoader;
-import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
-import com.nostra13.universalimageloader.core.assist.QueueProcessingType;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Iterator;
 import java.util.List;
 
-public class MOOCActivity extends AppCompatActivity {
+public class MOOCActivity extends AppCompatActivity implements MOOCAdapter.MoocItemClickListener {
+    private String listRequestURL = "http://1.footballapp.sinaapp.com/mooclist.php?nextPage=";
     private String[] images = {
-            "http://img2.imgtn.bdimg.com/it/u=3093785514,1341050958&fm=21&gp=0.jpg",
-            "http://img2.3lian.com/2014/f2/37/d/40.jpg",
-            "http://d.3987.com/sqmy_131219/001.jpg",
-            "http://img2.3lian.com/2014/f2/37/d/39.jpg",
-            "http://www.8kmm.com/UploadFiles/2012/8/201208140920132659.jpg",
-            "http://f.hiphotos.baidu.com/image/h%3D200/sign=1478eb74d5a20cf45990f9df460b4b0c/d058ccbf6c81800a5422e5fdb43533fa838b4779.jpg",
-            "http://f.hiphotos.baidu.com/image/pic/item/09fa513d269759ee50f1971ab6fb43166c22dfba.jpg"
+            "http://7xpjee.com1.z0.glb.clouddn.com/0logo.jpg",
+            "http://7xpjee.com1.z0.glb.clouddn.com/01.jpg",
+            "http://7xpjee.com1.z0.glb.clouddn.com/02.jpg",
+            "http://7xpjee.com1.z0.glb.clouddn.com/03.jpg",
+            "http://7xpjee.com1.z0.glb.clouddn.com/04.jpg",
+            "http://7xpjee.com1.z0.glb.clouddn.com/05.jpg",
+            "http://7xpjee.com1.z0.glb.clouddn.com/06.jpg"
     };
     private List<String> networkImages;
+
+    private XRecyclerView mRecyclerView;
+    private MOOCAdapter moocAdapter;
+    private ArrayList<MoocItemData> datas;
+    private int times = 0;
+    private RequestQueue mQueue;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mooc);
 
-        initImageLoader();
+        mQueue = Volley.newRequestQueue(this);
+        setUpScrollBar();
+        setUpRecyclerView();
+        setUpAdapter();
+
+        mRecyclerView.setLoadingListener(new XRecyclerView.LoadingListener() {
+            @Override
+            public void onRefresh() {
+                times = 0;
+                datas.clear();
+                volleyGetHttp();
+            }
+
+            @Override
+            public void onLoadMore() {
+                times ++;
+                volleyGetHttp();
+            }
+        });
+
+        volleyGetHttp();
+    }
+
+    private void volleyGetHttp() {
+        String requestURL = listRequestURL + times;
+        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(requestURL, null,
+                new Response.Listener<JSONObject>() {
+                    @Override
+                    public void onResponse(JSONObject arg0) {
+                        Iterator<String> it = arg0.keys();
+                        int itemNumber = 0;
+                        JSONArray maps;
+                        try {
+                            itemNumber = arg0.getInt(it.next());
+                            maps = arg0.getJSONArray(it.next());
+                            for (int i = 0; i < maps.length(); ++i) {
+                                JSONObject obj = (JSONObject) maps.get(i);
+                                MoocItemData data = new MoocItemData(obj);
+                                datas.add(data);
+                            }
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                        moocAdapter.notifyDataSetChanged();
+                        mRecyclerView.loadMoreComplete();
+                        if (itemNumber > 0) {
+                            mRecyclerView.refreshComplete();
+                        }
+                    }
+                }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError arg0) {
+            }
+        });
+
+        mQueue.add(jsonObjectRequest);
+    }
+
+    private void setUpRecyclerView() {
+        mRecyclerView = (XRecyclerView)this.findViewById(R.id.recyclerview);
+        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
+        layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
+        mRecyclerView.setLayoutManager(layoutManager);
+
+        mRecyclerView.setRefreshProgressStyle(ProgressStyle.BallSpinFadeLoader);
+        mRecyclerView.setLaodingMoreProgressStyle(ProgressStyle.BallRotate);
+        mRecyclerView.setArrowImageView(R.drawable.iconfont_downgrey);
+    }
+
+    private void setUpAdapter() {
+        datas = new ArrayList<MoocItemData>();
+        moocAdapter = new MOOCAdapter(datas);
+        mRecyclerView.setAdapter(moocAdapter);
+        moocAdapter.setOnItemClickListener(this);
+    }
+
+    private void setUpScrollBar() {
         ConvenientBanner convenientBanner = (ConvenientBanner)findViewById(R.id.convenientBanner);
 
         networkImages= Arrays.asList(images);
@@ -49,19 +143,9 @@ public class MOOCActivity extends AppCompatActivity {
                 .setPageTransformer(Transformer.DefaultTransformer);
     }
 
-    //初始化网络图片缓存库
-    private void initImageLoader(){
-        //网络图片例子,结合常用的图片缓存库UIL,你可以根据自己需求自己换其他网络图片库
-        DisplayImageOptions defaultOptions = new DisplayImageOptions.Builder().
-                showImageForEmptyUri(R.drawable.mooc_bar_bg)
-                .cacheInMemory(true).cacheOnDisk(true).build();
-
-        ImageLoaderConfiguration config = new ImageLoaderConfiguration.Builder(
-                getApplicationContext()).defaultDisplayImageOptions(defaultOptions)
-                .threadPriority(Thread.NORM_PRIORITY - 2)
-                .denyCacheImageMultipleSizesInMemory()
-                .diskCacheFileNameGenerator(new Md5FileNameGenerator())
-                .tasksProcessingOrder(QueueProcessingType.LIFO).build();
-        ImageLoader.getInstance().init(config);
+    @Override
+    public void onItemClick(View view, int postion) {
+        MoocItemData data = datas.get(postion - 1);
+        Log.e("list", "onItemClick: url = " + data.getUrl());
     }
 }
