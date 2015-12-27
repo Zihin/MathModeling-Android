@@ -1,9 +1,9 @@
 package com.neu.coder.mathmodeling.MOOC;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
-import android.util.Log;
 import android.view.View;
 
 import com.android.volley.RequestQueue;
@@ -146,6 +146,14 @@ public class MOOCActivity extends AppCompatActivity implements MOOCAdapter.MoocI
     @Override
     public void onItemClick(View view, int postion) {
         MoocItemData data = datas.get(postion - 1);
-        Log.e("list", "onItemClick: url = " + data.getUrl());
+        String url = data.getUrl();
+
+        Intent intent = new Intent();
+        intent.setClass(this, MoocWebView.class);
+        Bundle bundle = new Bundle();
+        bundle.putString("url", url);
+        intent.putExtras(bundle);
+
+        startActivity(intent);
     }
 }
