@@ -6,4 +6,6 @@
     <color name="tabbar_text_color">#9F9F9F</color>
     <color name="tabbar_background_color">#ffffffff</color>
     <color name="tabbar_selected_text_color">#74ace1</color>
+    <color name="red">#f2100c</color>
+    <color name="dark_red">#40000c</color>
 </resources>

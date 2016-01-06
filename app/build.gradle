@@ -34,4 +34,6 @@ dependencies {
     //图片缓存
     compile 'com.jcodecraeer:xrecyclerview:1.2.6'
     //下拉加载，上拉刷新的listview
+    compile 'com.felipecsl.asymmetricgridview:library:2.0.1'
+    //可跨行夸列的GridView
 }
