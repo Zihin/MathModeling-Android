@@ -5,4 +5,5 @@
     <dimen name="activity_horizontal_zero_margin">0dp</dimen>
     <dimen name="activity_vertical_zero_margin">0dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
+    <dimen name="metro_margin">4dp</dimen>
 </resources>

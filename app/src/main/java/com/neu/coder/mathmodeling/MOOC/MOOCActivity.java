@@ -33,7 +33,6 @@ public class MOOCActivity extends AppCompatActivity implements MOOCAdapter.MoocI
             "http://7xpjee.com1.z0.glb.clouddn.com/0logo.jpg",
             "http://7xpjee.com1.z0.glb.clouddn.com/01.jpg",
             "http://7xpjee.com1.z0.glb.clouddn.com/02.jpg",
-            "http://7xpjee.com1.z0.glb.clouddn.com/03.jpg",
             "http://7xpjee.com1.z0.glb.clouddn.com/04.jpg",
             "http://7xpjee.com1.z0.glb.clouddn.com/05.jpg",
             "http://7xpjee.com1.z0.glb.clouddn.com/06.jpg"

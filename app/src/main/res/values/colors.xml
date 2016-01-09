@@ -8,4 +8,6 @@
     <color name="tabbar_selected_text_color">#74ace1</color>
     <color name="red">#f2100c</color>
     <color name="dark_red">#40000c</color>
+    <color name="resource_background">#7DC5EE</color>
+    <color name="resource_item_background">#7EB848</color>
 </resources>
