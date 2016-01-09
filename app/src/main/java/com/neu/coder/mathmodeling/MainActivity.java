@@ -1,5 +1,6 @@
 package com.neu.coder.mathmodeling;
 
+import android.app.Activity;
 import android.app.LocalActivityManager;
 import android.content.Intent;
 import android.os.Bundle;
@@ -19,7 +20,7 @@ import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 import com.nostra13.universalimageloader.core.assist.QueueProcessingType;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends Activity {
 
     private RadioGroup main_radiogroup;
     private TabHost tabHost;
