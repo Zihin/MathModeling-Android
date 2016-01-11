@@ -37,6 +37,6 @@ public class ClubActivity extends AppCompatActivity {
         }
         pager.setAdapter(new MyFrPagerAdapter(getSupportFragmentManager(), titles, fragments));
         tabs.setViewPager(pager);
-        pager.setCurrentItem(1);
+        pager.setCurrentItem(0);
     }
 }
