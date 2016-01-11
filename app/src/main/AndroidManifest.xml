@@ -9,7 +9,7 @@
         android:anyDensity="true"
         android:largeScreens="true"
         android:normalScreens="true"
-        android:smallScreens="true"></supports-screens>
+        android:smallScreens="true" />
 
     <application
         android:allowBackup="true"
@@ -29,7 +29,8 @@
         <activity android:name=".Quiz.QuizActivity" />
         <activity android:name=".Settings.SettingActivity" />
         <activity android:name=".Resources.ResourcesActivity" />
-        <activity android:name=".MOOC.MoocWebView"></activity>
+        <activity android:name=".MOOC.MoocWebView" />
+        <activity android:name=".Club.WebViewActivity"></activity>
     </application>
 
 </manifest>
