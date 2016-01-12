@@ -31,6 +31,10 @@
         <activity android:name=".Resources.ResourcesActivity" />
         <activity android:name=".MOOC.MoocWebView" />
         <activity android:name=".Club.WebViewActivity"></activity>
+
+        <activity android:name=".Settings.SettingsGuideAty" />
+        <activity android:name=".Settings.LoginAty" />
+        <activity android:name=".Settings.SignInAty" />
     </application>
 
 </manifest>
