@@ -16,8 +16,8 @@ public class WebViewActivity extends Activity {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_web_view);
-        Intent intent=getIntent();
-        String data=intent.getStringExtra("web_type");
+        Intent intent = getIntent();
+        String data = intent.getStringExtra("web_type");
 
         WebView webView;
         webView = (WebView) findViewById(R.id.web_view);
