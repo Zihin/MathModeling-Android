@@ -30,7 +30,16 @@
         <activity android:name=".Settings.SettingActivity" />
         <activity android:name=".Resources.ResourcesActivity" />
         <activity android:name=".MOOC.MoocWebView" />
-        <activity android:name=".Club.WebViewActivity"></activity>
+        <activity android:name=".Club.WebViewActivity" />
+        <activity
+            android:name=".Resources.ResouceDetailViewActivity"
+            android:label="@string/title_activity_resouce_detail_view"
+            android:parentActivityName=".Resources.ResourcesActivity"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.neu.coder.mathmodeling.Resources.ResourcesActivity" />
+        </activity>
     </application>
 
 </manifest>

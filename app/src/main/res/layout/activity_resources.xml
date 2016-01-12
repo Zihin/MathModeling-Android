@@ -27,6 +27,7 @@
                 android:layout_height="match_parent"
                 android:text="美赛参考资料"
                 android:id="@+id/usaReference"
+                android:clickable="true"
                 android:background="@color/resource_item_background"
                 android:gravity="center"
                 android:layout_margin="@dimen/metro_margin"
@@ -37,6 +38,7 @@
                 android:layout_height="match_parent"
                 android:text="国赛参考资料"
                 android:id="@+id/domesticReference"
+                android:clickable="true"
                 android:background="@color/resource_item_background"
                 android:gravity="center"
                 android:layout_alignBottom="@+id/usaReference"
@@ -56,6 +58,7 @@
                 android:layout_height="match_parent"
                 android:text="MATLAB资料"
                 android:id="@+id/matlabReference"
+                android:clickable="true"
                 android:background="@color/resource_item_background"
                 android:gravity="center"
                 android:layout_margin="@dimen/metro_margin"
@@ -66,6 +69,7 @@
                 android:layout_height="match_parent"
                 android:text="MATLAB算法"
                 android:id="@+id/matlabAlgorithm"
+                android:clickable="true"
                 android:background="@color/resource_item_background"
                 android:gravity="center"
                 android:layout_margin="@dimen/metro_margin"
@@ -83,6 +87,7 @@
                 android:layout_height="match_parent"
                 android:text="名师讲课视频"
                 android:id="@+id/teachingVedio"
+                android:clickable="true"
                 android:background="@color/resource_item_background"
                 android:gravity="center"
                 android:layout_margin="@dimen/metro_margin" />
@@ -100,6 +105,7 @@
                 android:layout_height="match_parent"
                 android:text="学习资源分享区"
                 android:id="@+id/resourceSharing"
+                android:clickable="true"
                 android:background="@color/resource_item_background"
                 android:gravity="center"
                 android:layout_margin="@dimen/metro_margin" />
@@ -116,6 +122,7 @@
                 android:layout_height="match_parent"
                 android:text="问题悬赏区"
                 android:id="@+id/questions"
+                android:clickable="true"
                 android:background="@color/resource_item_background"
                 android:gravity="center"
                 android:layout_margin="@dimen/metro_margin" />
@@ -132,6 +139,7 @@
                 android:layout_height="match_parent"
                 android:text="离线资源"
                 android:id="@+id/offLineResource"
+                android:clickable="true"
                 android:background="@color/resource_item_background"
                 android:gravity="center"
                 android:layout_margin="@dimen/metro_margin" />

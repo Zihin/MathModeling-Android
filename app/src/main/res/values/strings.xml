@@ -5,4 +5,5 @@
     <string name="main_radio3_text">做题</string>
     <string name="main_radio4_text">资料</string>
     <string name="main_radio5_text">设置</string>
+    <string name="title_activity_resouce_detail_view">ResouceDetailViewActivity</string>
 </resources>
