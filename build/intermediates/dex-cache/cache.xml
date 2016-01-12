@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/eric/soursetree/MathModeling-Android/app/build/intermediates/exploded-aar/com.android.support/design/23.1.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="379471b2bd17d9737c050345c08e8c7d16589784">
+        <dex dex="/Users/eric/soursetree/MathModeling-Android/app/build/intermediates/pre-dexed/debug/classes-81f064de458e5ceab04e84378801d0c9d069b564.jar" />
+    </item>
+    <item
+        jar="/Users/eric/Desktop/安卓/sdk/extras/android/m2repository/com/android/support/support-annotations/23.1.1/support-annotations-23.1.1.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="8d680ba5a623724d1fb0e81c36a790f023a6cede">
+        <dex dex="/Users/eric/soursetree/MathModeling-Android/app/build/intermediates/pre-dexed/debug/support-annotations-23.1.1-36a6c8fe03f3b9337c029c9fe2623c80c6520102.jar" />
+    </item>
+    <item
+        jar="/Users/eric/soursetree/MathModeling-Android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="5c5699834e9722f1c288fea2de82725d078ba127">
+        <dex dex="/Users/eric/soursetree/MathModeling-Android/app/build/intermediates/pre-dexed/debug/classes-18dd465fa2440b711a4de16edc1db77c182398b0.jar" />
+    </item>
+    <item
+        jar="/Users/eric/soursetree/MathModeling-Android/app/build/intermediates/exploded-aar/com.bigkoo/convenientbanner/1.1.4/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="c4e5766aee236cdf50ea20f51b6cd23e33087c2c">
+        <dex dex="/Users/eric/soursetree/MathModeling-Android/app/build/intermediates/pre-dexed/debug/classes-df587a9f6993200efc8e59a91b354dd90ebbff9a.jar" />
+    </item>
+    <item
+        jar="/Users/eric/.gradle/caches/modules-2/files-2.1/com.nostra13.universalimageloader/universal-image-loader/1.9.5/442dbfb517b9ab5cb5c6da7ebf8cc28ec5bd0375/universal-image-loader-1.9.5.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="442dbfb517b9ab5cb5c6da7ebf8cc28ec5bd0375">
+        <dex dex="/Users/eric/soursetree/MathModeling-Android/app/build/intermediates/pre-dexed/debug/universal-image-loader-1.9.5-00df08503e16c7f17164d343187e4b84396f72dc.jar" />
+    </item>
+    <item
+        jar="/Users/eric/soursetree/MathModeling-Android/app/build/intermediates/exploded-aar/com.jcodecraeer/xrecyclerview/1.2.6/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="5a2b73afb548f356180ccc16e6a37f675da299b7">
+        <dex dex="/Users/eric/soursetree/MathModeling-Android/app/build/intermediates/pre-dexed/debug/classes-97a3b1568452c975abc725d0c015b07d038bdf5d.jar" />
+    </item>
+    <item
+        jar="/Users/eric/soursetree/MathModeling-Android/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="6cbc7773921fcfedbe55657578f0cbfe614778dc">
+        <dex dex="/Users/eric/soursetree/MathModeling-Android/app/build/intermediates/pre-dexed/debug/classes-1bed2021e83b4c18bb729ff1d495b6f3db3af437.jar" />
+    </item>
+    <item
+        jar="/Users/eric/.gradle/caches/modules-2/files-2.1/com.nineoldandroids/library/2.4.0/e9b63380f3a242dbdbf103a2355ad7e43bad17cb/library-2.4.0.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="e9b63380f3a242dbdbf103a2355ad7e43bad17cb">
+        <dex dex="/Users/eric/soursetree/MathModeling-Android/app/build/intermediates/pre-dexed/debug/library-2.4.0-c987439f7ae24946a4397375205b55ce30f13a96.jar" />
+    </item>
+    <item
+        jar="/Users/eric/soursetree/MathModeling-Android/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/jars/libs/internal_impl-23.1.1.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="a4de9c81ae239414e1ed0f86441b02abaf29bca9">
+        <dex dex="/Users/eric/soursetree/MathModeling-Android/app/build/intermediates/pre-dexed/debug/internal_impl-23.1.1-c7756d5662753f9a0d96a669bb620bbb318710b9.jar" />
+    </item>
+    <item
+        jar="/Users/eric/soursetree/MathModeling-Android/app/build/intermediates/exploded-aar/com.gxz.pagerslidingtabstrip/library/1.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="28ce8e5de3119a829d63387e978f438e5a6faec4">
+        <dex dex="/Users/eric/soursetree/MathModeling-Android/app/build/intermediates/pre-dexed/debug/classes-81dc829c874fc0c5f88c96945eb9b6d27d636a81.jar" />
+    </item>
+    <item
+        jar="/Users/eric/soursetree/MathModeling-Android/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.1.1/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="09c5e804bc67fc0580360043dff067df574a60d4">
+        <dex dex="/Users/eric/soursetree/MathModeling-Android/app/build/intermediates/pre-dexed/debug/classes-7fd47751a90e5ece33cd07349ae8421084aa3043.jar" />
+    </item>
+    <item
+        jar="/Users/eric/.gradle/caches/modules-2/files-2.1/com.mcxiaoke.volley/library/1.0.19/a8f23f65fc1e522ee4a1a697ee569901a46741fa/library-1.0.19.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="a8f23f65fc1e522ee4a1a697ee569901a46741fa">
+        <dex dex="/Users/eric/soursetree/MathModeling-Android/app/build/intermediates/pre-dexed/debug/library-1.0.19-9d05c36025583677c1c98e8c7dc2dc15818a9b64.jar" />
+    </item>
+
+</items>

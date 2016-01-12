@@ -32,6 +32,9 @@
         <activity android:name=".MOOC.MoocWebView" />
 
         <activity
+            android:name=".Quiz.DoQuizActivity" />
+
+        <activity
             android:name=".Resources.ResouceDetailViewActivity"
             android:label="@string/title_activity_resouce_detail_view"
             android:parentActivityName=".Resources.ResourcesActivity"

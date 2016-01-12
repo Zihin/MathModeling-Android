@@ -1,7 +1,7 @@
 package com.neu.coder.mathmodeling.Settings;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 
 import com.neu.coder.mathmodeling.R;
 

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item
+        android:state_enabled="true"
+        android:state_checked="true"
+        android:drawable="@mipmap/button_setting_pressed">
+    </item>
+    <item
+        android:drawable="@mipmap/button_setting_unpressed">
+    </item>
+</selector><!-- From: file:/Users/eric/soursetree/MathModeling-Android/app/src/main/res/drawable/main_tabbar_button_settings.xml -->

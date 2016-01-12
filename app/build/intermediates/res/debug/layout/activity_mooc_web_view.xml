@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_zero_margin"
+    android:paddingLeft="@dimen/activity_horizontal_zero_margin"
+    android:paddingRight="@dimen/activity_horizontal_zero_margin"
+    android:paddingTop="@dimen/activity_vertical_zero_margin"
+    tools:context="com.neu.coder.mathmodeling.MOOC.MoocWebView">
+
+    <WebView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/webView"
+        />
+
+</RelativeLayout>
+<!-- From: file:/Users/eric/soursetree/MathModeling-Android/app/src/main/res/layout/activity_mooc_web_view.xml -->
