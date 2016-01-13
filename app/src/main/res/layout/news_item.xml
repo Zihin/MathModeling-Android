@@ -10,9 +10,9 @@
         android:layout_height="wrap_content"
         android:ellipsize="end"
         android:gravity="center_vertical"
-        android:paddingBottom="15sp"
-        android:paddingTop="15sp"
+        android:paddingBottom="13sp"
+        android:paddingTop="13sp"
         android:singleLine="true"
-        android:textSize="25sp" />
+        android:textSize="20sp" />
 
 </RelativeLayout>
