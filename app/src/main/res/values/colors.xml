@@ -10,6 +10,7 @@
     <color name="dark_red">#40000c</color>
     <color name="resource_background">#7DC5EE</color>
     <color name="resource_item_background">#b4b885</color>
+    <color name="resource_item_background2">#905ab84e</color>
 
     <color name="background_tab_pressed">#6633B5E5</color>
     <color name="color_80cbc4">#80cbc4</color>

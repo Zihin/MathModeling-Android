@@ -13,13 +13,58 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:background="@color/tabbar_selected_text_color">
+        android:background="@color/color_1A000000">
 
-        <!--第一行-->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0.08" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text=" 在 线 资 料 "
+                android:textStyle="bold"
+                android:textColor="@color/titlebar_bg"
+                android:textSize="50px"
+                android:id="@+id/title"
+                android:clickable="true"
+                android:background="#05000000"
+                android:gravity="center"
+                android:layout_margin="@dimen/metro_margin" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="0.16" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:text="我的资源"
+                android:id="@+id/myResource"
+                android:clickable="true"
+                android:background="@color/resource_item_background2"
+                android:gravity="center"
+                android:layout_margin="@dimen/metro_margin" />
+        </LinearLayout>
+
+        <!--第2行-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
             android:orientation="horizontal"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
             android:layout_weight="0.16">
 
             <TextView
@@ -46,11 +91,14 @@
                 android:layout_weight="0.5" />
         </LinearLayout>
 
-        <!--第二行-->
+        <!--第3行-->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
             android:layout_weight="0.16" >
 
             <TextView
@@ -59,7 +107,7 @@
                 android:text="MATLAB资料"
                 android:id="@+id/matlabReference"
                 android:clickable="true"
-                android:background="@color/resource_item_background"
+                android:background="@color/resource_item_background2"
                 android:gravity="center"
                 android:layout_margin="@dimen/metro_margin"
                 android:layout_weight="0.5" />
@@ -70,7 +118,7 @@
                 android:text="MATLAB算法"
                 android:id="@+id/matlabAlgorithm"
                 android:clickable="true"
-                android:background="@color/resource_item_background"
+                android:background="@color/resource_item_background2"
                 android:gravity="center"
                 android:layout_margin="@dimen/metro_margin"
                 android:layout_weight="0.5" />
@@ -80,6 +128,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
             android:layout_weight="0.16" >
 
             <TextView
@@ -98,6 +149,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
             android:layout_weight="0.2" >
 
             <TextView
@@ -106,7 +160,7 @@
                 android:text="学习资源分享区"
                 android:id="@+id/resourceSharing"
                 android:clickable="true"
-                android:background="@color/resource_item_background"
+                android:background="@color/resource_item_background2"
                 android:gravity="center"
                 android:layout_margin="@dimen/metro_margin" />
         </LinearLayout>
@@ -115,6 +169,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
             android:layout_weight="0.16" >
 
             <TextView
@@ -132,6 +189,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
             android:layout_weight="0.16" >
 
             <TextView
@@ -140,7 +201,7 @@
                 android:text="离线资源"
                 android:id="@+id/offLineResource"
                 android:clickable="true"
-                android:background="@color/resource_item_background"
+                android:background="@color/resource_item_background2"
                 android:gravity="center"
                 android:layout_margin="@dimen/metro_margin" />
         </LinearLayout>
