@@ -10,15 +10,34 @@
     <ScrollView
         android:layout_weight="1"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/background_tab_pressed"
+        android:fillViewport="@bool/abc_config_closeDialogWhenTouchOutside"
+        android:id="@+id/scrollView">
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:id="@+id/linearLayout">
+
+            <TextView
+                android:text="题  目"
+                android:id="@+id/subTitle"
+                android:textSize="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
 
             <TextView
                 android:text="Question Desciption"
                 android:id="@+id/question"
+                android:textSize="15dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
@@ -28,34 +47,66 @@
                 android:layout_height="wrap_content">
 
                 <RadioButton
-                    android:text="AnswerA"
-                    android:id="@+id/answerA"
+                    android:text="firstAnswer"
+                    android:id="@+id/firstAnswer"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/color_e8e8e8"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
                 <RadioButton
-                    android:text="AnswerB"
-                    android:id="@+id/answerB"
+                    android:text="secondAnswer"
+                    android:id="@+id/secondAnswer"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/color_e8e8e8"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
                 <RadioButton
-                    android:text="AnswerC"
-                    android:id="@+id/answerC"
+                    android:text="thirdAnswer"
+                    android:id="@+id/thirdAnswer"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/color_e8e8e8"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
                 <RadioButton
-                    android:text="AnswerD"
-                    android:id="@+id/answerD"
+                    android:text="forthAnswer"
+                    android:id="@+id/forthAnswer"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@color/color_e8e8e8"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
 
             </RadioGroup>
 
-            <TextView
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/color_e8e8e8"
+                android:id="@+id/linearLayoutForExp"
                 android:visibility="invisible"
-                android:id="@+id/explaination"
-                android:text="Question Explaination"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:visibility="invisible"
+                    android:id="@+id/explaination"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="Question Explaination"
+                    android:textColor="@color/color_45c01a"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
 
         </LinearLayout>
     </ScrollView>
@@ -63,18 +114,30 @@
     <LinearLayout
         android:layout_weight="7"
         android:orientation="horizontal"
+        android:background="@color/color_e8e8e8"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <Button
             android:text="上一题"
-            android:id="@+id/btn_previous"
+            android:id="@+id/preciousButton"
             android:layout_weight="1"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/resource_item_background"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
+
         <Button
             android:text="下一题"
-            android:id="@+id/btn_next"
+            android:id="@+id/nextButton"
             android:layout_weight="1"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/resource_item_background"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 

@@ -9,7 +9,7 @@
     <color name="red">#f2100c</color>
     <color name="dark_red">#40000c</color>
     <color name="resource_background">#7DC5EE</color>
-    <color name="resource_item_background">#7EB848</color>
+    <color name="resource_item_background">#b4b885</color>
 
     <color name="background_tab_pressed">#6633B5E5</color>
     <color name="color_80cbc4">#80cbc4</color>
@@ -19,4 +19,13 @@
     <color name="color_e8e8e8">#e8e8e8</color>
     <color name="color_2b2b2b">#2b2b2b</color>
     <color name="color_0babd1">#0babd1</color>
+
+    <color name="right_answer">#009100</color>
+    <color name="titlebar_bg">#222222</color>
+    <color name="select_default">#969fa5</color>
+    <color name="select_right">#48daa9</color>
+    <color name="select_error">#eb6161</color>
+    <color name="select_select">#c6c6c6</color>
+    <color name="select_answered">#60adde</color>
+
 </resources>

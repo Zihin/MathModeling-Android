@@ -25,7 +25,7 @@ public class QuizActivity extends AppCompatActivity {
         setContentView(R.layout.activity_quiz);
 
 
-        final TextView[] textViews = new TextView[7];
+        final TextView[] textViews = new TextView[8];
         textViews[0] = (TextView)findViewById(R.id.textView1);
         textViews[1] = (TextView)findViewById(R.id.textView2);
         textViews[2] = (TextView)findViewById(R.id.textView3);
@@ -33,11 +33,12 @@ public class QuizActivity extends AppCompatActivity {
         textViews[4] = (TextView)findViewById(R.id.textView5);
         textViews[5] = (TextView)findViewById(R.id.textView6);
         textViews[6] = (TextView)findViewById(R.id.textView7);
+        textViews[7] = (TextView)findViewById(R.id.textView8);
 
         final Button[] buttons = new Button[1];
         buttons[0] = (Button)findViewById(R.id.button);
 
-        final ImageButton[] imageButtons = new ImageButton[7];
+        final ImageButton[] imageButtons = new ImageButton[8];
         imageButtons[0] = (ImageButton)findViewById(R.id.imageButton1);
         imageButtons[1] = (ImageButton)findViewById(R.id.imageButton2);
         imageButtons[2] = (ImageButton)findViewById(R.id.imageButton3);
@@ -45,6 +46,7 @@ public class QuizActivity extends AppCompatActivity {
         imageButtons[4] = (ImageButton)findViewById(R.id.imageButton5);
         imageButtons[5] = (ImageButton)findViewById(R.id.imageButton6);
         imageButtons[6] = (ImageButton)findViewById(R.id.imageButton7);
+        imageButtons[7] = (ImageButton)findViewById(R.id.imageButton8);
 
         for(int i = 0; i < 7; i++){
             textViews[i].setVisibility(View.INVISIBLE);
@@ -86,7 +88,7 @@ public class QuizActivity extends AppCompatActivity {
 
                 buttons[0].setClickable(false);
 
-                for(int i = 0; i < 7; i++){
+                for(int i = 0; i < 8; i++){
                     textViews[i].setVisibility(View.VISIBLE);
                     imageButtons[i].setVisibility(View.VISIBLE);
                 }
@@ -174,6 +176,18 @@ public class QuizActivity extends AppCompatActivity {
                 Intent intent = new Intent(QuizActivity.this, DoQuizActivity.class);
                 Bundle bundle=new Bundle();
                 bundle.putString("whichQuiz", "7");
+                intent.putExtras(bundle);
+                startActivity(intent);
+            }
+        });
+
+        ImageButton imb8 = (ImageButton)findViewById(R.id.imageButton8);
+        imb8.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(QuizActivity.this, DoQuizActivity.class);
+                Bundle bundle=new Bundle();
+                bundle.putString("whichQuiz", "0");
                 intent.putExtras(bundle);
                 startActivity(intent);
             }

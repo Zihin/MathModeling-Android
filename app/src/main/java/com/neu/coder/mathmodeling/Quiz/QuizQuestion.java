@@ -5,13 +5,15 @@ package com.neu.coder.mathmodeling.Quiz;
  */
 public class QuizQuestion {
     public String question;
-    public String answerA;
-    public String answerB;
-    public String answerC;
-    public String answerD;
-    public int answer;
-    public String explaination;
-    public int ID;
+    public String firstAnswer;
+    public String secondAnswer;
+    public String thirdAnswer;
+    public String forthAnswer;
+    public int correctAnswer;
+    public String expOfAnswer;
+    public int id;
 
-    public int selectedAnswer;
+    public int chosenAnswer;
+
+    public boolean rightOrWrong = true;
 }
