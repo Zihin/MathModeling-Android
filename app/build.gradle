@@ -22,20 +22,21 @@ android {
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     testCompile 'junit:junit:4.12'
-    compile 'com.android.support:appcompat-v7:23.1.1'
-    compile 'com.android.support:design:23.1.1'
-    compile 'com.android.support:support-v4:23.1.1'
     //Third-party
-    compile 'com.mcxiaoke.volley:library:1.0.19'
     //网络请求
-    compile 'com.bigkoo:convenientbanner:1.1.4'
     //图片轮播
-    compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
     //图片缓存
-    compile 'com.jcodecraeer:xrecyclerview:1.2.6'
     //下拉加载，上拉刷新的listview
     compile('com.gxz.pagerslidingtabstrip:library:1.1') {
         exclude group: 'com.android.support', module: 'appcompat-v7'
     }
     //TabStrip
+    compile 'com.android.support:appcompat-v7:23.1.1'
+    compile 'com.android.support:design:23.1.1'
+    compile 'com.android.support:support-v4:23.1.1'
+    compile 'com.mcxiaoke.volley:library:1.0.19'
+    compile 'com.bigkoo:convenientbanner:1.1.4'
+    compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
+    compile 'com.jcodecraeer:xrecyclerview:1.2.6'
+    compile 'com.google.android.gms:play-services:8.3.0'
 }

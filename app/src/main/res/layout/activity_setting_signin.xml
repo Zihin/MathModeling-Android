@@ -1,61 +1,154 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/setting_background1">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="注册"
-        android:textSize="70px"
-        android:id="@+id/title" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/blank" />
+    <ScrollView android:id="@+id/login_form" android:layout_width="match_parent"
+        android:layout_gravity="center"
+        android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="邮箱"
-        android:id="@+id/MailLabel" />
+        <LinearLayout android:id="@+id/email_login_form" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:orientation="vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/loginAccountLabel" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="用户名"
-        android:id="@+id/loginAccountLabel" />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="  系 统 注 册  "
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="#3665e6a5"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:id="@+id/title"
+                android:layout_gravity="center_horizontal" />
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/loginAccount" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="密码"
-        android:id="@+id/loginPasswordLabel" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textSize="16dp"
+                    android:text="  邮        箱："
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:id="@+id/textView10"
+                    android:layout_gravity="center" />
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="textPassword"
-        android:ems="10"
-        android:id="@+id/loginPassword" />
+                <AutoCompleteTextView android:id="@+id/email" android:layout_width="200dp"
+                    android:layout_height="match_parent" android:hint="请输入你的邮箱"
+                    android:textStyle="italic"
+                    android:background="@drawable/shape"
+                    android:textSize="10dp"
+                    android:layout_marginTop="10dp"
+                    android:inputType="textEmailAddress" android:maxLines="1"
+                    android:singleLine="true" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="确认注册"
-        android:id="@+id/btnSignin" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textSize="16dp"
+                    android:text="  用  户  名： "
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:id="@+id/loginAccountLabel"
+                    android:layout_gravity="center" />
+
+                <EditText android:id="@+id/password" android:layout_width="200dp"
+                    android:layout_height="wrap_content" android:hint="请输入你的用户名"
+                    android:textStyle="italic"
+                    android:background="@drawable/shape"
+                    android:textSize="10dp"
+                    android:imeActionId="@+id/login"
+                    android:layout_marginTop="10dp"
+                    android:imeActionLabel="@string/action_sign_in_short"
+                    android:imeOptions="actionUnspecified" android:inputType="textPassword"
+                    android:maxLines="1" android:singleLine="true" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textSize="16dp"
+                    android:text="  密       码： "
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:id="@+id/loginPasswordLabel1"
+                    android:layout_gravity="center" />
+
+                <EditText android:id="@+id/loginPassword1" android:layout_width="200dp"
+                    android:layout_height="wrap_content" android:hint="请输入你的密码"
+                    android:textStyle="italic"
+                    android:background="@drawable/shape"
+                    android:textSize="10dp"
+                    android:imeActionId="@+id/login"
+                    android:layout_marginTop="10dp"
+                    android:imeActionLabel="@string/action_sign_in_short"
+                    android:imeOptions="actionUnspecified" android:inputType="textPassword"
+                    android:maxLines="1" android:singleLine="true" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textSize="16dp"
+                    android:text="                         "
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:id="@+id/loginPasswordLabel2"
+                    android:layout_gravity="center" />
+
+                <EditText android:id="@+id/loginPassword2" android:layout_width="200dp"
+                    android:layout_height="wrap_content" android:hint="请确认你的密码"
+                    android:textStyle="italic"
+                    android:background="@drawable/shape"
+                    android:textSize="10dp"
+                    android:imeActionId="@+id/login"
+                    android:layout_marginTop="10dp"
+                    android:imeActionLabel="@string/action_sign_in_short"
+                    android:imeOptions="actionUnspecified" android:inputType="textPassword"
+                    android:maxLines="1" android:singleLine="true" />
+
+            </LinearLayout>
+
+            <Button android:id="@+id/btnSignin" style="?android:textAppearanceSmall"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp" android:text="      注    册      "
+                android:background="#de65e6a5"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </ScrollView>
+
 </LinearLayout>

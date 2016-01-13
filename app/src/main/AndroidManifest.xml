@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.neu.coder.mathmodeling">
+    package="com.neu.coder.mathmodeling" >
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -11,13 +11,18 @@
         android:normalScreens="true"
         android:smallScreens="true" />
 
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        android:theme="@style/AppTheme" >
+        <activity android:name=".MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -30,24 +35,25 @@
         <activity android:name=".Settings.SettingActivity" />
         <activity android:name=".Resources.ResourcesActivity" />
         <activity android:name=".MOOC.MoocWebView" />
-
-        <activity
-            android:name=".Quiz.DoQuizActivity" />
-
+        <activity android:name=".Quiz.DoQuizActivity" />
         <activity
             android:name=".Resources.ResouceDetailViewActivity"
             android:label="@string/title_activity_resouce_detail_view"
             android:parentActivityName=".Resources.ResourcesActivity"
-            android:theme="@style/AppTheme">
+            android:theme="@style/AppTheme" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.neu.coder.mathmodeling.Resources.ResourcesActivity" />
         </activity>
-        <activity android:name=".Club.WebViewActivity"></activity>
-
+        <activity android:name=".Club.WebViewActivity" />
         <activity android:name=".Settings.SettingsGuideAty" />
-        <activity android:name=".Settings.LoginAty" />
+        <activity android:name=".Settings.LoginActivity" />
         <activity android:name=".Settings.SignInAty" />
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/title_activity_login"
+            android:windowSoftInputMode="adjustResize|stateVisible" >
+        </activity>
     </application>
 
 </manifest>
