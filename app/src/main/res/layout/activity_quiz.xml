@@ -28,6 +28,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="    我    要    测    试    "
+            android:textSize="20dp"
             android:textColor="#FFFFFF"
             android:background="@color/background_tab_pressed"
             android:id="@+id/button"

@@ -27,8 +27,8 @@
             android:layout_gravity="center"
             android:textStyle="bold"
             android:text="        设  置        "
-            android:background="#b3f8ff"
-            android:textSize="50px"
+            android:background="#33b3f8ff"
+            android:textSize="23dp"
             android:id="@+id/textView" />
 
         <ListView

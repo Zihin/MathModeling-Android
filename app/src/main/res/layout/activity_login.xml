@@ -27,9 +27,9 @@
                 android:text="登  陆  系  统"
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="20dp"
-                android:background="#3665e6a5"
+                android:background="#1365e6a5"
                 android:textStyle="bold"
-                android:textSize="25dp"
+                android:textSize="20dp"
                 android:id="@+id/textView9"
                 android:layout_gravity="center_horizontal" />
 
