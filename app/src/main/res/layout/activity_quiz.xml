@@ -6,6 +6,15 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     >
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageButton"
+        android:src="@drawable/quiz_pic1"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -29,42 +38,34 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
         android:layout_marginLeft="5dp"
-        android:layout_below="@+id/linearLayout">
+        android:layout_below="@+id/linearLayout"
+        android:id="@+id/linearLayout3">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="随机选题"
+            android:text="随机\n选题"
             android:textColor="@color/select_answered"
             android:textSize="10dp"
+            android:gravity="center"
             android:visibility="invisible"
             android:id="@+id/textView8"
             />
 
         <ImageButton
-            android:layout_width="57dp"
-            android:layout_height="47dp"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
             android:id="@+id/imageButton8"
             android:src="@mipmap/button_quiz_pressed"
             android:visibility="invisible"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
+            android:layout_below="@+id/linearLayout3" />
 
     </LinearLayout>
-
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/imageButton"
-        android:src="@drawable/quiz_pic1"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="180dp"
-        />
-
 
     <LinearLayout
         android:layout_weight="1"
@@ -72,7 +73,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
-        android:layout_marginTop="145dp">
+        android:id="@+id/linearLayout4"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="20dp">
 
         <ImageButton
             android:layout_weight="1"
@@ -81,7 +86,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/imageButton1"
             android:src="@mipmap/button_quiz_pressed"
-            android:visibility="invisible"
+            android:visibility="visible"
             />
         <ImageButton
             android:layout_weight="1"
@@ -90,7 +95,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/imageButton2"
             android:src="@mipmap/button_quiz_pressed"
-            android:visibility="invisible"
+            android:visibility="visible"
             />
         <ImageButton
             android:layout_weight="1"
@@ -99,7 +104,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/imageButton3"
             android:src="@mipmap/button_quiz_pressed"
-            android:visibility="invisible"
+            android:visibility="visible"
             />
         <ImageButton
             android:layout_weight="1"
@@ -108,7 +113,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/imageButton4"
             android:src="@mipmap/button_quiz_pressed"
-            android:visibility="invisible"
+            android:visibility="visible"
             />
         <ImageButton
             android:layout_weight="1"
@@ -117,7 +122,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/imageButton5"
             android:src="@mipmap/button_quiz_pressed"
-            android:visibility="invisible"
+            android:visibility="visible"
             />
         <ImageButton
             android:layout_weight="1"
@@ -126,7 +131,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/imageButton6"
             android:src="@mipmap/button_quiz_pressed"
-            android:visibility="invisible"
+            android:visibility="visible"
             />
         <ImageButton
             android:layout_weight="1"
@@ -135,7 +140,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/imageButton7"
             android:src="@mipmap/button_quiz_pressed"
-            android:visibility="invisible"
+            android:visibility="visible"
             />
 
     </LinearLayout>
@@ -146,8 +151,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
-        android:layout_marginTop="130dp"
-        android:id="@+id/linearLayout2">
+        android:id="@+id/linearLayout2"
+        android:layout_above="@+id/linearLayout4"
+        android:layout_alignParentLeft="true">
 
         <TextView
             android:layout_weight="1"
@@ -158,7 +164,7 @@
             android:text="第一套"
             android:textColor="@color/select_answered"
             android:textSize="10dp"
-            android:visibility="invisible"
+            android:visibility="visible"
             android:id="@+id/textView1"
             />
 
@@ -171,7 +177,7 @@
             android:text="第二套"
             android:textColor="@color/select_answered"
             android:textSize="10dp"
-            android:visibility="invisible"
+            android:visibility="visible"
             android:id="@+id/textView2"
             />
 
@@ -184,7 +190,7 @@
             android:text="第三套"
             android:textColor="@color/select_answered"
             android:textSize="10dp"
-            android:visibility="invisible"
+            android:visibility="visible"
             android:id="@+id/textView3"
             />
 
@@ -197,7 +203,7 @@
             android:text="第四套"
             android:textColor="@color/select_answered"
             android:textSize="10dp"
-            android:visibility="invisible"
+            android:visibility="visible"
             android:id="@+id/textView4"
             />
 
@@ -210,7 +216,7 @@
             android:text="第五套"
             android:textColor="@color/select_answered"
             android:textSize="10dp"
-            android:visibility="invisible"
+            android:visibility="visible"
             android:id="@+id/textView5"
             />
 
@@ -223,7 +229,7 @@
             android:text="第六套"
             android:textColor="@color/select_answered"
             android:textSize="10dp"
-            android:visibility="invisible"
+            android:visibility="visible"
             android:id="@+id/textView6"
             />
 
@@ -236,11 +242,10 @@
             android:text="第七套"
             android:textColor="@color/select_answered"
             android:textSize="10dp"
-            android:visibility="invisible"
+            android:visibility="visible"
             android:id="@+id/textView7"
             />
 
     </LinearLayout>
-
 
 </RelativeLayout>

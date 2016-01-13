@@ -10,6 +10,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -62,7 +63,10 @@ public class DoQuizActivity extends ActionBarActivity {
 
         //上一题与下一题按钮
         final Button nextButton = (Button)findViewById(R.id.nextButton);
-        Button preciousButton = (Button)findViewById(R.id.preciousButton);
+        final Button preciousButton = (Button)findViewById(R.id.preciousButton);
+
+        final Button seeExplainationButton = (Button)findViewById(R.id.seeExplainationButton);
+        final ImageButton rightOrWrongImage = (ImageButton)findViewById(R.id.rightOrWrong);
 
         //初始显示第一道题目
         QuizQuestion question = questions.get(0);
@@ -77,8 +81,9 @@ public class DoQuizActivity extends ActionBarActivity {
             public void onClick(View view) {
 
                 for (int i = 0; i < 4; i++) {
-                    radioButtons[i].setBackground(getResources().getDrawable(R.color.color_e8e8e8));
+                    radioButtons[i].setBackground(getResources().getDrawable(R.color.halfcolor_e8e8e8));
                 }
+                linearLayoutForExp.setVisibility(View.INVISIBLE);
 
                 if (current < count - 1) {
 
@@ -98,11 +103,13 @@ public class DoQuizActivity extends ActionBarActivity {
                     if (question.rightOrWrong && checkWrong == true) {
                         if (question.chosenAnswer != -1)
                             radioButtons[question.chosenAnswer].setBackground(getResources().getDrawable(R.color.select_right));
+                        rightOrWrongImage.setBackground(getResources().getDrawable(R.drawable.right));
                         currentExplaination.setText("      你做对了！！！\n      答案解释：" + question.expOfAnswer);
                     } else if (checkWrong == true) {
                         radioButtons[question.correctAnswer].setBackground(getResources().getDrawable(R.color.select_right));
                         if (question.chosenAnswer != -1)
                             radioButtons[question.chosenAnswer].setBackground(getResources().getDrawable(R.color.select_error));
+                        rightOrWrongImage.setBackground(getResources().getDrawable(R.drawable.wrong));
                         currentExplaination.setText("      你做错了！！！\n      答案解释：" + question.expOfAnswer);
                     }
 
@@ -149,7 +156,16 @@ public class DoQuizActivity extends ActionBarActivity {
                                 @Override
                                 public void onClick(DialogInterface dialog, int which) {
 
-                                    checkWrong = true;
+                                    seeExplainationButton.setVisibility(View.VISIBLE);
+
+                                    seeExplainationButton.setOnClickListener(new View.OnClickListener() {
+                                        @Override
+                                        public void onClick(View v) {
+                                            linearLayoutForExp.setVisibility(View.VISIBLE);
+                                        }
+                                    });
+
+                                            checkWrong = true;
                                     for (int i = 0; i < wrongQuestionNumbers.size(); i++) {
                                         wrongQuetions.add(questions.get(wrongQuestionNumbers.get(i)));
                                         questions.get(wrongQuestionNumbers.get(i)).rightOrWrong = false;
@@ -164,20 +180,23 @@ public class DoQuizActivity extends ActionBarActivity {
                                     radioButtons[1].setText("  B. " + question.secondAnswer);
                                     radioButtons[2].setText("  C. " + question.thirdAnswer);
                                     radioButtons[3].setText("  D. " + question.forthAnswer);
-                                    linearLayoutForExp.setVisibility(View.VISIBLE);
+//                                    linearLayoutForExp.setVisibility(View.VISIBLE);
 
                                     if (question.rightOrWrong) {
                                         if (question.chosenAnswer != -1)
                                             radioButtons[question.chosenAnswer].setBackground(getResources().getDrawable(R.color.select_right));
+                                        rightOrWrongImage.setBackground(getResources().getDrawable(R.drawable.right));
                                         currentExplaination.setText("      你做对了！！！\n      答案解释：" + question.expOfAnswer);
-                                    } else {
+                                    } else{
                                         radioButtons[question.correctAnswer].setBackground(getResources().getDrawable(R.color.select_right));
                                         if (question.chosenAnswer != -1)
                                             radioButtons[question.chosenAnswer].setBackground(getResources().getDrawable(R.color.select_error));
+                                        rightOrWrongImage.setBackground(getResources().getDrawable(R.drawable.wrong));
                                         currentExplaination.setText("      你做错了！！！\n      答案解释：" + question.expOfAnswer);
                                     }
 
                                     currentExplaination.setVisibility(View.VISIBLE);
+                                    rightOrWrongImage.setVisibility(View.VISIBLE);
                                 }
                             };
 
@@ -216,8 +235,9 @@ public class DoQuizActivity extends ActionBarActivity {
                 nextButton.setText("下一题");
 
                 for(int i = 0; i < 4; i++){
-                    radioButtons[i].setBackground(getResources().getDrawable(R.color.color_e8e8e8));
+                    radioButtons[i].setBackground(getResources().getDrawable(R.color.halfcolor_e8e8e8));
                 }
+                linearLayoutForExp.setVisibility(View.INVISIBLE);
 
                 if (current > 0) {
                     current--;
@@ -237,11 +257,13 @@ public class DoQuizActivity extends ActionBarActivity {
                     if(question.rightOrWrong && checkWrong == true) {
                         if (question.chosenAnswer != -1)
                             radioButtons[question.chosenAnswer].setBackground(getResources().getDrawable(R.color.select_right));
+                        rightOrWrongImage.setBackground(getResources().getDrawable(R.drawable.right));
                         currentExplaination.setText("      你做对了！！！\n      答案解释：" + question.expOfAnswer);
                     }else if(checkWrong == true){
                         radioButtons[question.correctAnswer].setBackground(getResources().getDrawable(R.color.select_right));
                         if (question.chosenAnswer != -1)
                             radioButtons[question.chosenAnswer].setBackground(getResources().getDrawable(R.color.select_error));
+                        rightOrWrongImage.setBackground(getResources().getDrawable(R.drawable.wrong));
                         currentExplaination.setText("      你做错了！！！\n      答案解释：" + question.expOfAnswer);
                     }
                 }else{
